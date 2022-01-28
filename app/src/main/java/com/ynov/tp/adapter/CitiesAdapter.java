@@ -1,5 +1,6 @@
 package com.ynov.tp.adapter;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -38,9 +39,11 @@ public class CitiesAdapter extends RecyclerView.Adapter<CitiesHolder> {
     @Override
     public void onBindViewHolder(@NonNull CitiesHolder holder, int position) {
         Cities city= citiesArrayList.get(position);
+        Bundle bundle = new Bundle();
+        bundle.putString("cityId", city.getId());
         holder.itemView.setOnClickListener(
                 (view) -> Navigation.findNavController(holder.itemView)
-                        .navigate(R.id.detailCityFragment)
+                        .navigate(R.id.detailCityFragment, bundle)
         );
         holder.binding.setCity(city);
         if(city.getPic().getUrl().length() > 0) {

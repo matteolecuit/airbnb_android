@@ -6,7 +6,7 @@ import android.os.Parcelable;
 public class Housing implements Parcelable {
     String title;
     Float price;
-    Picture pic;
+    Picture illustrations;
 
     protected Housing(Parcel in) {
         title = in.readString();
@@ -43,6 +43,14 @@ public class Housing implements Parcelable {
 
     public void setPrice(Float price) {
         this.price = price;
+    }
+
+    public Picture getIllustrations() {
+        return illustrations;
+    }
+
+    public void setIllustrations(Picture illustrations) {
+        this.illustrations = illustrations;
     }
 
     @Override
