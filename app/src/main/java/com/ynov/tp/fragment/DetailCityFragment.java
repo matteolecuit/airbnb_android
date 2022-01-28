@@ -88,6 +88,6 @@ public class DetailCityFragment extends Fragment {
     private void showFirstHousing(Housing housing) {
         Picasso.get().load("https://flutter-learning.mooo.com"+housing.getIllustrations().getUrl()).into(imageView);
         textViewTitle.setText(housing.getTitle());
-        textViewPrice.setText(housing.getPrice().toString() + "€ / week");
+        textViewPrice.setText(housing.getPrice().toString() + "€ / night");
     }
 }

@@ -19,9 +19,6 @@
             android:exported="true"
             android:theme="@style/Theme.tp.NoActionBar" />
         <activity
-            android:name=".activity.ShowMsgActivity"
-            android:exported="true" />
-        <activity
             android:name=".activity.RegisterActivity"
             android:exported="true"
             android:theme="@style/Theme.tp.NoActionBar" >
