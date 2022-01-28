@@ -16,7 +16,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.ynov.tp.R;
 import com.ynov.tp.adapter.CitiesAdapter;
-import com.ynov.tp.bo.Cities;
+import com.ynov.tp.bo.City;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -63,9 +63,9 @@ public class ListCitiesFragment extends Fragment {
 
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-                ArrayList<Cities> cities = new Gson().fromJson(
+                ArrayList<City> cities = new Gson().fromJson(
                         response.body().string(),
-                        new TypeToken<ArrayList<Cities>>() {
+                        new TypeToken<ArrayList<City>>() {
                         }.getType()
                 );
                 getActivity().runOnUiThread(() -> {
@@ -76,7 +76,7 @@ public class ListCitiesFragment extends Fragment {
         });
     }
 
-    private void showCities(ArrayList<Cities> cities) {
+    private void showCities(ArrayList<City> cities) {
         RecyclerView rv = getView().findViewById(R.id.recyclerView);
         CitiesAdapter adapter = new CitiesAdapter(cities);
         rv.setLayoutManager(new LinearLayoutManager(getContext()));

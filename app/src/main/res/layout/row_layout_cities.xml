@@ -6,7 +6,7 @@
     <data>
         <variable
             name="city"
-            type="com.ynov.tp.bo.Cities" />
+            type="com.ynov.tp.bo.City" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -11,16 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 import com.ynov.tp.R;
-import com.ynov.tp.bo.Cities;
+import com.ynov.tp.bo.City;
 import com.ynov.tp.databinding.RowLayoutCitiesBinding;
 
 import java.util.ArrayList;
 
 public class CitiesAdapter extends RecyclerView.Adapter<CitiesHolder> {
 
-    ArrayList<Cities> citiesArrayList;
+    ArrayList<City> citiesArrayList;
 
-    public CitiesAdapter(ArrayList<Cities> citiesArrayList) {
+    public CitiesAdapter(ArrayList<City> citiesArrayList) {
         this.citiesArrayList = citiesArrayList;
     }
 
@@ -38,7 +38,7 @@ public class CitiesAdapter extends RecyclerView.Adapter<CitiesHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull CitiesHolder holder, int position) {
-        Cities city= citiesArrayList.get(position);
+        City city= citiesArrayList.get(position);
         Bundle bundle = new Bundle();
         bundle.putString("cityId", city.getId());
         holder.itemView.setOnClickListener(

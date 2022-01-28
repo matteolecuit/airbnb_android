@@ -3,7 +3,7 @@ package com.ynov.tp.bo;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Cities implements Parcelable {
+public class City implements Parcelable {
     String name, id;
 
     public Picture getPic() {
@@ -32,20 +32,20 @@ public class Cities implements Parcelable {
         this.id = id;
     }
 
-    protected Cities(Parcel in) {
+    protected City(Parcel in) {
         name = in.readString();
         id = in.readString();
     }
 
-    public static final Creator<Cities> CREATOR = new Creator<Cities>() {
+    public static final Creator<City> CREATOR = new Creator<City>() {
         @Override
-        public Cities createFromParcel(Parcel in) {
-            return new Cities(in);
+        public City createFromParcel(Parcel in) {
+            return new City(in);
         }
 
         @Override
-        public Cities[] newArray(int size) {
-            return new Cities[size];
+        public City[] newArray(int size) {
+            return new City[size];
         }
     };
 
