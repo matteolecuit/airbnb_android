@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ynov discussion</string>
+    <string name="register_name">Nom</string>
+    <string name="register_email">Email</string>
+    <string name="register_password">Mot de passe</string>
+    <string name="register_button">S\'enregister</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Mot de passe</string>
+    <string name="login_button">Se connecter</string>
+</resources>

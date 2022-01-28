@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/listCitiesFragment">
+
+    <fragment
+        android:id="@+id/detailMessageFragment"
+        android:name="com.ynov.tp.fragment.DetailMessageFragment"
+        android:label="fragment_detail_message"
+        tools:layout="@layout/fragment_detail_message" >
+        <argument
+            android:name="message"
+            app:argType="com.ynov.tp.bo.Message" />
+    </fragment>
+    <fragment
+        android:id="@+id/listMessageFragment"
+        android:name="com.ynov.tp.fragment.ListMessageFragment"
+        android:label="fragment_list_message"
+        tools:layout="@layout/fragment_list_message" >
+        <action
+            android:id="@+id/action_listMessageFragment_to_detailMessageFragment"
+            app:destination="@id/detailMessageFragment"
+            app:popUpTo="@id/listMessageFragment" />
+        <action
+            android:id="@+id/action_listMessageFragment_to_listUserFragment"
+            app:destination="@id/listUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listUserFragment"
+        android:name="com.ynov.tp.fragment.ListUserFragment"
+        android:label="fragment_list_user"
+        tools:layout="@layout/fragment_list_user" >
+        <action
+            android:id="@+id/action_listUserFragment_to_detailUserFragment"
+            app:destination="@id/detailUserFragment"
+            app:popUpTo="@id/listUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailUserFragment"
+        android:name="com.ynov.tp.fragment.DetailUserFragment"
+        android:label="fragment_detail_user"
+        tools:layout="@layout/fragment_detail_user" >
+        <argument
+            android:name="user"
+            app:argType="com.ynov.tp.bo.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailCityFragment"
+        android:name="com.ynov.tp.fragment.DetailCityFragment"
+        android:label="DetailCityFragment" />
+    <fragment
+        android:id="@+id/listCitiesFragment"
+        android:name="com.ynov.tp.fragment.ListCitiesFragment"
+        android:label="ListCitiesFragment" >
+        <action
+            android:id="@+id/action_listCitiesFragment_to_detailCityFragment"
+            app:destination="@id/detailCityFragment" />
+    </fragment>
+</navigation>
